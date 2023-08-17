@@ -1,8 +1,13 @@
 /* Global */
 :root {
+    /* Animation Delay Times */
+    --nav-delay-time: 200ms;
+    --text-delay-time: 500ms;
+    /* Animation Load Times */
     --nav-load-time: 500ms;
     --text-load-time: 2s;
 }
+
 * {
     scroll-behavior: smooth;
 }
@@ -14,7 +19,7 @@ body {
 
 /* Navbar/Popover Styling */
 #navbar {
-    animation: nav-load var(--nav-load-time) ease-in;
+    animation: nav-load var(--nav-load-time) ease-in var(--nav-delay-time);
 }
 
 .popover {
@@ -42,7 +47,7 @@ body {
 }
 
 #intro {
-    animation: text-load var(--text-load-time) ease-in;
+    animation: text-load var(--text-load-time) ease-in var(--text-delay-time);
 }
 
 /* @Keyframes */
