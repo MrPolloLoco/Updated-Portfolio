@@ -1,11 +1,11 @@
 /* Global */
 :root {
+    /* Text Colors*/
+    --h1-color-1: #F8DE22; 
     /* Animation Delay Times */
-    --nav-delay-time: 200ms;
-    --text-delay-time: 500ms;
+    --nav-delay-time: 500ms;
     /* Animation Load Times */
-    --nav-load-time: 500ms;
-    --text-load-time: 2s;
+    --nav-load-time: 1s;
 }
 
 * {
@@ -14,6 +14,9 @@
 
 /* Main Content Styling */
 body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -33,36 +36,24 @@ body {
     color: white;
 }
 
-/* Home Background/Intro Styling */
-.masthead {
-    background-size: cover;
-    min-height: 100vh;
-    position: relative;
+/* Carousel Styling */
+.c-item {
+    height: 100vh;
 }
 
-.color-overlay {
-    position: absolute;
-    width: 100%;
+.c-img {
     height: 100%;
+    object-fit: cover;
 }
 
-#intro {
-    animation: text-load var(--text-load-time) ease-in var(--text-delay-time);
+h1 {
+    color: var(--h1-color-1);
 }
 
 /* @Keyframes */
 @keyframes nav-load {
     0% {
         transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-@keyframes text-load {
-    0% {
-        transform: translateY(-20%);
         opacity: 0;
     }
     100% {
